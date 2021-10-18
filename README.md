@@ -62,6 +62,7 @@ dataset
   |    |     ├── labels
   |    |     └── codes
   ├── cityscapes
+  |    ├── train
   |    |     ├── images
   |    |     ├── labels
   |    |     └── codes
@@ -79,15 +80,26 @@ After preparing test images, the reconstructed images can be obtained using the 
 1. Creat a `checkpoint/celeba` folder. Download pretrained weight from [Google Drive](https://drive.google.com) and upzip this `checkpoint.zip` in the `./checkpoint/celeba` folder.
 2. Run `test.py` to generate synthesized images with a below code, which will be saved in `./checkpoint/celeba/result`. Save path and details can be edited in `./options/base_options.py` and `./options/test_options.py`.
 ```
-
+python test.py --name celeba --load_size 256 --crop_size 256 --dataset_mode custom --label_dir datasets/celeba/test/labels --image_dir datasets/celeba/test/images --label_nc 19 --instance_dir datasets/celeba/test/codes --which_epoch 50 --gpu_ids 0
 ```
 
 ## Training a new model on personal dataset
-We update `train.py` to train SuperStyleNet on personal dataset.
 
-1. Save train and test images in `./datasets/train` and `./datasets/test` folders, respectively.
-2. Check your personal setting (i.e., implementation details, save path, and so on) in `./options/base_options.py` and `./options/train_options.py`.
-3. Run `train.py` or type 'python train.py' in your terminal.
+# For CelebAMask-HQ
+1. Check your personal setting (i.e., implementation details, save path, and so on) in `./options/base_options.py` and `./options/train_options.py`.
+2. Run `train.py`.
+```
+python train.py --name celeba --gpu_ids 0,1,2,3 --batchSize 32 --load_size 256 --crop_size 256 --dataset_mode custom --label_nc 19 --label_dir datasets/celeba/train/labels --image_dir datasets/celeba/train/images --instance_dir datasets/celeba/train/codes
+```
+
+# For personal dataset
+1. Save train and test images with labels in `./datasets/[dataset name]/train/[images or labels]` and `./datasets/[dataset name]/test/[images or labels]` folders, respectively.
+2. Run `save_style_vector.py` to extract and save style vectors. This process requires a lot of time.
+3. Check your personal setting (i.e., implementation details, save path, and so on) in `./options/base_options.py` and `./options/train_options.py`.
+4. Run `train.py`.
+```
+python train.py --name personal_data --gpu_ids 0,1,2,3 --batchSize 32 --load_size 256 --crop_size 256 --dataset_mode custom --label_nc 19 --label_dir datasets/[dataset name]/train/labels --image_dir datasets/[dataset name]/train/images --instance_dir datasets/[dataset name]/train/codes
+```
 
 ## Citation
 If you use this code for your research, please cite our papers.
