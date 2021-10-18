@@ -1,7 +1,9 @@
 # SuperStyleNet: Deep Image Synthesis with Superpixel Based Style Encoder (BMVC 2021)
 
-![SPSE](https://user-images.githubusercontent.com/42399549/137692560-ccb7e96e-6b9a-417c-8bbe-97db01205ea2.png)
+**Figure:** Style mixing with multiple style images. The style vectors are replaced from source to style image on given semantic masks.
 
+![SPSE](https://user-images.githubusercontent.com/42399549/137692560-ccb7e96e-6b9a-417c-8bbe-97db01205ea2.png)
+**Figure:** Superpixel based Style Encoding. To extract style codes of a specific semantic mask, we convert the input image into the five-dimensional space and cluster it in the semantic mask into superpixels. Thereafter, pixel values in each superpixel are averaged to obtain a style code.
 
 ## Abstract
 
