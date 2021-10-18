@@ -1,5 +1,8 @@
 # SuperStyleNet: Deep Image Synthesis with Superpixel Based Style Encoder (BMVC 2021)
 
+![SPSE](https://user-images.githubusercontent.com/42399549/137692560-ccb7e96e-6b9a-417c-8bbe-97db01205ea2.png)
+
+
 ## Abstract
 
 <details>
