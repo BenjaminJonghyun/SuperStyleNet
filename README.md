@@ -7,7 +7,8 @@
 Existing methods for image synthesis utilized a style encoder based on stacks of convolutions and pooling layers to generate style codes from input images. However, the encoded vectors do not necessarily contain local information of the corresponding images since small-scale objects are tended to "wash away" through such downscaling procedures. In this paper, we propose deep image synthesis with superpixel based style encoder, named as SuperStyleNet. First, we directly extract the style codes from the original image based on superpixels to consider local objects. Second, we recover spatial relationships in vectorized style codes based on graphical analysis. Thus, the proposed network achieves high-quality image synthesis by mapping the style codes into semantic labels. Experimental results show that the proposed method outperforms state-of-the-art ones in terms of visual quality and quantitative measurements. Furthermore, we achieve elaborate spatial style editing by adjusting style codes.
 </details>
 
-> **SuperStlyeNet: Deep Image Synthesis with Superpixel Based Style Encoder** \\
+> **SuperStlyeNet: Deep Image Synthesis with Superpixel Based Style Encoder**
+> 
 > Jonghuyn Kim, Gen Li, Cheolkon Jung, Joongkyu Kim    
 > British Machine Vision Conference **BMVC 2021**
 
