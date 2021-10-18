@@ -47,38 +47,40 @@ urllib3==1.25.8
 visdom==0.1.8.9
 </details>
 
-
 ## Dataset
 
-This network uses [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ), [Cityscapes](https://www.cityscapes-dataset.com/), and [CMP-Facade](https://cmp.felk.cvut.cz/~tylecr1/facade/) dataset. After downloading this dataset, unzip and save test images in a `./datasets/celeba[dataset name]/train` and `./datasets/celeba[dataset name]/test` folder. 
+1. This network uses [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ), [Cityscapes](https://www.cityscapes-dataset.com/), and [CMP-Facade](https://cmp.felk.cvut.cz/~tylecr1/facade/) datasets. After downloading these datasets, unzip and save train and test images as follows: 
 ```
-├── camvid
-|    ├── train
-|    ├── test
-|    ├── val 
-|    ├── trainannot
-|    ├── testannot
-|    ├── valannot
-|    ├── camvid_trainval_list.txt
-|    ├── camvid_train_list.txt
-|    ├── camvid_test_list.txt
-|    └── camvid_val_list.txt
-├── cityscapes
-|    ├── gtCoarse
-|    ├── gtFine
-|    ├── leftImg8bit
-|    ├── cityscapes_trainval_list.txt
-|    ├── cityscapes_train_list.txt
-|    ├── cityscapes_test_list.txt
-|    └── cityscapes_val_list.txt           
+dataset
+  ├── celeba
+  |    ├── train
+  |    |     ├── images
+  |    |     ├── labels
+  |    |     └── codes
+  |    ├── test
+  |    |     ├── images
+  |    |     ├── labels
+  |    |     └── codes
+  ├── cityscapes
+  |    |     ├── images
+  |    |     ├── labels
+  |    |     └── codes
+  |    ├── test
+  |    |     ├── images
+  |    |     ├── labels
+  |    |     └── codes          
 ```
+2. Download style codes in each dataset from [Google Drive](https://drive.google.com). After downloading them, unzip and save in `./dataset/[dataset name]/[train or test]/codes`. **To extract style codes using SPSE, it requires a lot of time. Thereby, we provide all style codes of three datasets.**
 
-## Generating images using a pretrained model
+## Generating images using a pretrained model with style codes
 
 After preparing test images, the reconstructed images can be obtained using the pretrained model.
 
-1. Creat a `checkpoint/CelebA` folder. Download pretrained weight from [Google Drive](https://drive.google.com) and upzip this `checkpoint.zip` in the `./checkpoint/celeba` folder.
-2. Run `test.py` to generate synthesized images, which will be saved in `./checkpoint/celeba/result`. Save path and details can be edited in `./options/base_options.py` and `./options/test_options.py`.
+1. Creat a `checkpoint/celeba` folder. Download pretrained weight from [Google Drive](https://drive.google.com) and upzip this `checkpoint.zip` in the `./checkpoint/celeba` folder.
+2. Run `test.py` to generate synthesized images with a below code, which will be saved in `./checkpoint/celeba/result`. Save path and details can be edited in `./options/base_options.py` and `./options/test_options.py`.
+```
+
+```
 
 ## Training a new model on personal dataset
 We update `train.py` to train SuperStyleNet on personal dataset.
