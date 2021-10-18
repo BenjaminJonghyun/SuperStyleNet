@@ -1,5 +1,6 @@
 # SuperStyleNet: Deep Image Synthesis with Superpixel Based Style Encoder (BMVC 2021)
 
+![Mix_comp](https://user-images.githubusercontent.com/42399549/137694588-28f522ee-e9aa-480c-8f85-eba8f1ebe0e6.png)
 **Figure:** Style mixing with multiple style images. The style vectors are replaced from source to style image on given semantic masks.
 
 ![SPSE](https://user-images.githubusercontent.com/42399549/137692560-ccb7e96e-6b9a-417c-8bbe-97db01205ea2.png)
