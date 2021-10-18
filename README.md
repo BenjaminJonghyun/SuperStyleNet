@@ -85,14 +85,14 @@ python test.py --name celeba --load_size 256 --crop_size 256 --dataset_mode cust
 
 ## Training a new model on personal dataset
 
-# For CelebAMask-HQ
+### For CelebAMask-HQ
 1. Check your personal setting (i.e., implementation details, save path, and so on) in `./options/base_options.py` and `./options/train_options.py`.
 2. Run `train.py`.
 ```
 python train.py --name celeba --gpu_ids 0,1,2,3 --batchSize 32 --load_size 256 --crop_size 256 --dataset_mode custom --label_nc 19 --label_dir datasets/celeba/train/labels --image_dir datasets/celeba/train/images --instance_dir datasets/celeba/train/codes
 ```
 
-# For personal dataset
+### For personal dataset
 1. Save train and test images with labels in `./datasets/[dataset name]/train/[images or labels]` and `./datasets/[dataset name]/test/[images or labels]` folders, respectively.
 2. Run `save_style_vector.py` to extract and save style vectors. This process requires a lot of time.
 3. Check your personal setting (i.e., implementation details, save path, and so on) in `./options/base_options.py` and `./options/train_options.py`.
