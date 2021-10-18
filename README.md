@@ -51,7 +51,7 @@ visdom==0.1.8.9
 ## Dataset
 
 This network uses [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ), [Cityscapes](https://www.cityscapes-dataset.com/), and [CMP-Facade](https://cmp.felk.cvut.cz/~tylecr1/facade/) dataset. After downloading this dataset, unzip and save test images in a `./datasets/celeba[dataset name]/train` and `./datasets/celeba[dataset name]/test` folder. 
-
+```
 ├── camvid
 |    ├── train
 |    ├── test
@@ -71,7 +71,7 @@ This network uses [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-
 |    ├── cityscapes_train_list.txt
 |    ├── cityscapes_test_list.txt
 |    └── cityscapes_val_list.txt           
-
+```
 
 ## Generating images using a pretrained model
 
