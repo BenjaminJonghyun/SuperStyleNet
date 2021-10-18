@@ -18,28 +18,28 @@ Existing methods for image synthesis utilized a style encoder based on stacks of
 Clone this repo.
 
 Install requirements:
-```
-  <details>
-    <summary> CLICK ME </summary>
-  torch==1.2.0
-  torchvision==0.4.0
-  easydict
-  matplotlib
-  opencv-python
-  glob3
-  pillow
-  dill
-  dominate>=2.3.1 
-  scikit-image
-  QDarkStyle==2.7
-  qdarkgraystyle==1.0.2
-  tensorboard==1.14.0
-  tensorboardX==1.9
-  tqdm==4.32.1
-  urllib3==1.25.8
-  visdom==0.1.8.9
-  </details>
-```
+
+<details>
+  <summary> CLICK ME </summary>
+torch==1.2.0
+torchvision==0.4.0
+easydict
+matplotlib
+opencv-python
+glob3
+pillow
+dill
+dominate>=2.3.1 
+scikit-image
+QDarkStyle==2.7
+qdarkgraystyle==1.0.2
+tensorboard==1.14.0
+tensorboardX==1.9
+tqdm==4.32.1
+urllib3==1.25.8
+visdom==0.1.8.9
+</details>
+
 
 ## Dataset
 
