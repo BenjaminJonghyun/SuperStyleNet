@@ -28,15 +28,15 @@ Install requirements:
 
 <details>
   <summary> CLICK ME </summary>
-torch==1.2.0
-torchvision==0.4.0
-easydict
-matplotlib
-opencv-python
-glob3
-pillow
-dill
-dominate>=2.3.1 
+torch==1.2.0\\
+torchvision==0.4.0\\
+easydict\\
+matplotlib\\
+opencv-python\\
+glob3\\
+pillow\\
+dill\\
+dominate>=2.3.1 \\
 scikit-image
 QDarkStyle==2.7
 qdarkgraystyle==1.0.2
