@@ -71,13 +71,13 @@ dataset
   |    |     ├── labels
   |    |     └── codes          
 ```
-2. Download style codes in each dataset from [Google Drive](https://drive.google.com). After downloading them, unzip and save in `./dataset/[dataset name]/[train or test]/codes`. **To extract style codes using SPSE, it requires a lot of time. Thereby, we provide all style codes of three datasets.**
+2. Download style codes in each dataset from [Google Drive](https://drive.google.com/file/d/1m3SAljvNebIaCy3gEM_Kzs6TRfI-T839/view?usp=sharing). After downloading them, unzip and save in `./dataset/[dataset name]/[train or test]/codes`. **To extract style codes using SPSE, it requires a lot of time. Thereby, we provide all style codes of three datasets.**
 
 ## Generating images using a pretrained model with style codes
 
 After preparing test images, the reconstructed images can be obtained using the pretrained model.
 
-1. Creat a `checkpoint/celeba` folder. Download pretrained weight from [Google Drive](https://drive.google.com) and upzip this `checkpoint.zip` in the `./checkpoint/celeba` folder.
+1. Creat a `checkpoint/celeba` folder. Download pretrained weight from [Google Drive](https://drive.google.com/file/d/1XBoHicrboLrePqJULgKdcbIrlnXbI9JS/view?usp=sharing) and upzip this `checkpoint.zip` in the `./checkpoint/celeba` folder.
 2. Run `test.py` to generate synthesized images with a below code, which will be saved in `./checkpoint/celeba/result`. Save path and details can be edited in `./options/base_options.py` and `./options/test_options.py`.
 ```
 python test.py --name celeba --load_size 256 --crop_size 256 --dataset_mode custom --label_dir datasets/celeba/test/labels --image_dir datasets/celeba/test/images --label_nc 19 --instance_dir datasets/celeba/test/codes --which_epoch 50 --gpu_ids 0
