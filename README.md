@@ -28,6 +28,7 @@ Install requirements:
 
 <details>
   <summary> CLICK ME </summary>
+```
 torch==1.2.0
 torchvision==0.4.0
 easydict
@@ -45,6 +46,7 @@ tensorboardX==1.9
 tqdm==4.32.1
 urllib3==1.25.8
 visdom==0.1.8.9
+```
 </details>
 
 ## Dataset
