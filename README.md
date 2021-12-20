@@ -18,7 +18,7 @@ Existing methods for image synthesis utilized a style encoder based on stacks of
 > Jonghuyn Kim, Gen Li, Cheolkon Jung, Joongkyu Kim    
 > British Machine Vision Conference **BMVC 2021**
 
-[[Paper](https://www.bmvc2021-virtualconference.com/assets/papers/0051.pdf)]
+[[Paper](https://www.bmvc2021-virtualconference.com/assets/papers/0051.pdf)] [[Full Paper](https://arxiv.org/abs/2112.09367)]
 
 ## Installation
 
