@@ -106,12 +106,10 @@ python train.py --name personal_data --gpu_ids 0,1,2,3 --batchSize 32 --load_siz
 ## Citation
 If you use this code for your research, please cite our papers.
 ```
-@misc{kim2021superstylenet,
-      title={SuperStyleNet: Deep Image Synthesis with Superpixel Based Style Encoder}, 
-      author={Jonghyun Kim and Gen Li and Cheolkon Jung and Joongkyu Kim},
-      year={2021},
-      eprint={2112.09367},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{kim2021superstylenet,
+  title={SuperStyleNet: Deep Image Synthesis with Superpixel Based Style Encoder},
+  author={Jonghyun Kim and Gen Li and Cheolkon Jung and Joongkyu Kim},
+  booktitle={British Machine Vision Conference},
+  year={2021}
 }
 ```
