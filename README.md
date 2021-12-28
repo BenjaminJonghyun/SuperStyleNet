@@ -8,7 +8,7 @@
 
 ## Update
 ### Update (December 28, 2021)
-This update is to correct minor errors in 'save_style_vector.py'
+This update is to correct minor errors in `'save_style_vector.py'`.
 
 
 ## Abstract
