@@ -20,7 +20,7 @@ class data_augmentation(object):
         if not os.path.exists(save_path):
             os.mkdir(save_path)
 
-    def open_mask(self, path, width, height, isResize=True):
+    def open_mask(self, path, width, height, nlabel, isResize=True):
 
         mask = []
         image_name = path.split('/')[-1]
@@ -28,7 +28,7 @@ class data_augmentation(object):
         if isResize:
             anno = cv2.resize(anno, (width, height), interpolation=cv2.INTER_NEAREST)
         anno = anno[:, :, 0]
-        for idx in range(1):
+        for idx in range(nlabel):
             null = np.zeros_like(anno)
             if idx not in anno:
                 mask.append(null)
@@ -47,13 +47,13 @@ class data_augmentation(object):
         img = img.astype(np.float32)/255.0
         return img
 
-    def next_batch(self, width, height):
+    def next_batch(self, width, height, nlabel):
         for i in tqdm(self.img_list):
 
             input_img = i.split('/')[-1]
             number = input_img.split('.')[0]
 
-            mask_img = self.open_mask(i, width, height)
+            mask_img = self.open_mask(i, width, height, nlabel)
 
             mask_img = np.transpose(np.array(mask_img), (1, 2, 0))
 
@@ -72,4 +72,4 @@ class data_augmentation(object):
 
 data_generator = data_augmentation(data, anno_path, save_path)
 
-data_generator.next_batch(512, 512)
+data_generator.next_batch(512, 512, nlabel=19) # You should change nlabel depending on dataset
