@@ -6,10 +6,10 @@
 ![SPSE](https://user-images.githubusercontent.com/42399549/137692560-ccb7e96e-6b9a-417c-8bbe-97db01205ea2.png)
 **Figure:** Superpixel based Style Encoding. To extract style codes of a specific semantic mask, we convert the input image into the five-dimensional space and cluster it in the semantic mask into superpixels. Thereafter, pixel values in each superpixel are averaged to obtain a style code.
 
-## Edit
-```
-2021.12.28 We found minor errors in 'save_style_vector.py' and corrected them. 
-```
+## Update
+### Update (December 28, 2021)
+This update is to correct minor errors in 'save_style_vector.py'
+
 
 ## Abstract
 
