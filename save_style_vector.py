@@ -61,13 +61,7 @@ class data_augmentation(object):
 
             styles = _style_encoder(np.array([img]), np.array([mask_img]))
 
-            # num_of_label, batch, 1, 1, 512
-
-            load_styles = np.load(save_path + '/%d.npy' % int(number))
-            load_styles[0] = styles[0]
-            load_styles = load_styles[:34]
-
-            np.save(save_path + '/%d' % int(number), np.array(load_styles))
+            np.save(save_path + '/%d' % int(number), np.array(styles))
 
 
 data_generator = data_augmentation(data, anno_path, save_path)
